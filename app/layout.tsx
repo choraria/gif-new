@@ -53,63 +53,63 @@ export const metadata: Metadata = {
     icon: [
       {
         media: '(prefers-color-scheme: light)',
-        url: '/favicon.ico',
+        url: '/gif-new/favicon.ico',
         sizes: 'any'
       },
       {
         media: '(prefers-color-scheme: dark)',
-        url: '/dark-favicon.ico',
+        url: '/gif-new/dark-favicon.ico',
         sizes: 'any'
       },
       {
         media: '(prefers-color-scheme: light)',
-        url: '/favicon-16x16.png',
+        url: '/gif-new/favicon-16x16.png',
         sizes: '16x16',
         type: 'image/png'
       },
       {
         media: '(prefers-color-scheme: dark)',
-        url: '/dark-favicon-16x16.png',
+        url: '/gif-new/dark-favicon-16x16.png',
         sizes: '16x16',
         type: 'image/png'
       },
       {
         media: '(prefers-color-scheme: light)',
-        url: '/favicon-32x32.png',
+        url: '/gif-new/favicon-32x32.png',
         sizes: '32x32',
         type: 'image/png'
       },
       {
         media: '(prefers-color-scheme: dark)',
-        url: '/dark-favicon-32x32.png',
+        url: '/gif-new/dark-favicon-32x32.png',
         sizes: '32x32',
         type: 'image/png'
       },
       {
         media: '(prefers-color-scheme: light)',
-        url: '/favicon.svg',
+        url: '/gif-new/favicon.svg',
         type: 'image/svg+xml',
       },
       {
         media: '(prefers-color-scheme: dark)',
-        url: '/favicon-dark.svg',
+        url: '/gif-new/favicon-dark.svg',
         type: 'image/svg+xml',
       }
     ],
     apple: [
       {
         media: '(prefers-color-scheme: light)',
-        url: '/apple-touch-icon.png',
+        url: '/gif-new/apple-touch-icon.png',
       },
       {
         media: '(prefers-color-scheme: dark)',
-        url: '/dark-apple-touch-icon.png',
+        url: '/gif-new/dark-apple-touch-icon.png',
       }
     ],
     other: [
       {
         rel: 'mask-icon',
-        url: '/favicon.svg',
+        url: '/gif-new/favicon.svg',
       }
     ]
   }

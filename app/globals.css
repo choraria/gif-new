@@ -5,7 +5,7 @@
 /* Custom font loading for text overlays */
 @font-face {
   font-family: 'Impact';
-  src: url('/fonts/impact.ttf') format('truetype');
+  src: url('/gif-new/fonts/impact.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'Arial';
-  src: url('/fonts/arial.ttf') format('truetype');
+  src: url('/gif-new/fonts/arial.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('/fonts/helvetica.ttf') format('truetype');
+  src: url('/gif-new/fonts/helvetica.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: 'Times';
-  src: url('/fonts/times.ttf') format('truetype');
+  src: url('/gif-new/fonts/times.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -37,7 +37,7 @@
 
 @font-face {
   font-family: 'Courier';
-  src: url('/fonts/courier.ttf') format('truetype');
+  src: url('/gif-new/fonts/courier.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -45,7 +45,7 @@
 
 @font-face {
   font-family: 'Anton';
-  src: url('/fonts/anton.ttf') format('truetype');
+  src: url('/gif-new/fonts/anton.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

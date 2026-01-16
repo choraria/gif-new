@@ -1080,7 +1080,7 @@ export function VideoRecorder(): React.ReactElement {
         
         try {
           // Try to load local font first
-          const fontResponse = await fetch(`/fonts/${fontInfo.file}`);
+          const fontResponse = await fetch(`/gif-new/fonts/${fontInfo.file}`);
           if (fontResponse.ok) {
             const fontArrayBuffer = await fontResponse.arrayBuffer();
             await ffmpeg.writeFile(fontInfo.file, new Uint8Array(fontArrayBuffer));
@@ -1743,7 +1743,7 @@ export function VideoRecorder(): React.ReactElement {
             />
           ) : showWelcomeGif && !isRecording && !isPreviewMode ? (
             <Image 
-              src="/welcome-get-started.gif" 
+              src="/gif-new/welcome-get-started.gif" 
               alt="Welcome! Get Started" 
               fill
               className="object-cover"
