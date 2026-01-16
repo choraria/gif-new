@@ -55,11 +55,17 @@ const withPWA = require('next-pwa')({
   },
 });
 
+// Determine basePath: only use it for production builds (GitHub Pages)
+// In development, basePath is undefined so localhost works at root
+const isProduction = process.env.NODE_ENV === 'production';
+const basePath = isProduction ? '/gif-new' : '';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Static export for GitHub Pages
   output: 'export',
-  basePath: '/gif-new',
+  // Conditional basePath: only in production for GitHub Pages
+  basePath: basePath || undefined,
   poweredByHeader: false,
   compress: true,
   
@@ -77,6 +83,11 @@ const nextConfig = {
   // TypeScript configuration for build
   typescript: {
     ignoreBuildErrors: false,
+  },
+  
+  // Expose basePath to the app via environment variable
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 }
 
