@@ -1,41 +1,40 @@
 const fs = require('fs');
 const path = require('path');
 
-// Determine basePath based on environment
-const isProduction = process.env.NODE_ENV === 'production';
-const basePath = isProduction ? '/gif-new' : '';
+// No basePath - custom domain (gif.new) serves at root
+const basePath = '';
 
 const manifest = {
   name: "GIF.new - Personal Response GIF Creator",
   short_name: "GIF.new",
   description: "Instantly capture and create personal response GIFs from your camera",
-  start_url: `${basePath}/`,
+  start_url: "/",
   display: "standalone",
   background_color: "#ffffff",
   theme_color: "#000000",
   orientation: "portrait-primary",
-  scope: `${basePath}/`,
+  scope: "/",
   lang: "en",
   categories: ["entertainment", "utilities", "multimedia"],
   icons: [
     {
-      src: `${basePath}/android-chrome-192x192.png`,
+      src: "/android-chrome-192x192.png",
       sizes: "192x192",
       type: "image/png"
     },
     {
-      src: `${basePath}/android-chrome-512x512.png`,
+      src: "/android-chrome-512x512.png",
       sizes: "512x512",
       type: "image/png"
     },
     {
-      src: `${basePath}/android-chrome-192x192.png`,
+      src: "/android-chrome-192x192.png",
       sizes: "192x192",
       type: "image/png",
       purpose: "any maskable"
     },
     {
-      src: `${basePath}/android-chrome-512x512.png`,
+      src: "/android-chrome-512x512.png",
       sizes: "512x512",
       type: "image/png",
       purpose: "any maskable"
@@ -43,14 +42,14 @@ const manifest = {
   ],
   screenshots: [
     {
-      src: `${basePath}/screenshot-wide.png`,
+      src: "/screenshot-wide.png",
       sizes: "1280x720",
       type: "image/png",
       form_factor: "wide",
       label: "GIF.new main interface on desktop"
     },
     {
-      src: `${basePath}/screenshot-narrow.png`,
+      src: "/screenshot-narrow.png",
       sizes: "390x844",
       type: "image/png",
       form_factor: "narrow",
@@ -62,17 +61,17 @@ const manifest = {
       name: "Create GIF",
       short_name: "Create",
       description: "Start creating a new GIF",
-      url: `${basePath}/`,
+      url: "/",
       icons: [
         {
-          src: `${basePath}/android-chrome-192x192.png`,
+          src: "/android-chrome-192x192.png",
           sizes: "192x192"
         }
       ]
     }
   ],
   share_target: {
-    action: `${basePath}/`,
+    action: "/",
     method: "GET",
     enctype: "application/x-www-form-urlencoded",
     params: {
@@ -87,4 +86,4 @@ const manifest = {
 // Write manifest to public folder
 const manifestPath = path.join(__dirname, '../public/site.webmanifest');
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-console.log(`✅ Generated manifest with basePath: "${basePath || '(none)'}"`);
+console.log(`✅ Generated manifest (no basePath - serving at root)`);

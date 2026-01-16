@@ -1080,9 +1080,7 @@ export function VideoRecorder(): React.ReactElement {
         
         try {
           // Try to load local font first
-          // Next.js will automatically prefix with basePath in production
-          const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-          const fontResponse = await fetch(`${basePath}/fonts/${fontInfo.file}`);
+          const fontResponse = await fetch(`/fonts/${fontInfo.file}`);
           if (fontResponse.ok) {
             const fontArrayBuffer = await fontResponse.arrayBuffer();
             await ffmpeg.writeFile(fontInfo.file, new Uint8Array(fontArrayBuffer));
@@ -1745,7 +1743,7 @@ export function VideoRecorder(): React.ReactElement {
             />
           ) : showWelcomeGif && !isRecording && !isPreviewMode ? (
             <Image 
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/welcome-get-started.gif`}
+              src="/welcome-get-started.gif"
               alt="Welcome! Get Started" 
               fill
               className="object-cover"
