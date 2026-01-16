@@ -59,6 +59,7 @@ const withPWA = require('next-pwa')({
 const nextConfig = {
   // Static export for GitHub Pages
   output: 'export',
+  basePath: '/gif-new',
   poweredByHeader: false,
   compress: true,
   
