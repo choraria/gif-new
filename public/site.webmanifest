@@ -2,14 +2,18 @@
   "name": "GIF.new - Personal Response GIF Creator",
   "short_name": "GIF.new",
   "description": "Instantly capture and create personal response GIFs from your camera",
-  "start_url": "/gif-new/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "portrait-primary",
-  "scope": "/gif-new/",
+  "scope": "/",
   "lang": "en",
-  "categories": ["entertainment", "utilities", "multimedia"],
+  "categories": [
+    "entertainment",
+    "utilities",
+    "multimedia"
+  ],
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
