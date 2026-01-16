@@ -1745,7 +1745,7 @@ export function VideoRecorder(): React.ReactElement {
             />
           ) : showWelcomeGif && !isRecording && !isPreviewMode ? (
             <Image 
-              src="/welcome-get-started.gif" 
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/welcome-get-started.gif`}
               alt="Welcome! Get Started" 
               fill
               className="object-cover"

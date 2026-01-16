@@ -3,54 +3,8 @@
 @tailwind utilities;
 
 /* Custom font loading for text overlays */
-/* Paths use root-relative URLs - Next.js basePath will handle prefixing automatically */
-@font-face {
-  font-family: 'Impact';
-  src: url('/fonts/impact.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Arial';
-  src: url('/fonts/arial.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/helvetica.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Times';
-  src: url('/fonts/times.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Courier';
-  src: url('/fonts/courier.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Anton';
-  src: url('/fonts/anton.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* Font @font-face rules are injected dynamically in app/layout.tsx */
+/* This ensures correct basePath handling for both localhost and GitHub Pages */
 
 @layer base {
   :root {
