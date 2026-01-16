@@ -123,6 +123,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Redirect www to non-www (client-side redirect as backup) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                if (typeof window !== 'undefined' && window.location.hostname.startsWith('www.')) {
+                  window.location.replace(window.location.protocol + '//' + window.location.hostname.replace(/^www\\./, '') + window.location.pathname + window.location.search + window.location.hash);
+                }
+              })();
+            `,
+          }}
+        />
         {/* Inject font paths for CSS @font-face (serving at root) */}
         <style
           dangerouslySetInnerHTML={{
