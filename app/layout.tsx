@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "GIF.new",
   description: "Instantly capture and create personal response GIFs.",
-  manifest: '/site.webmanifest',
+  manifest: '/gif-new/site.webmanifest',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
